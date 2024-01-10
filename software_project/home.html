@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Teach Me</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-preload">
+
+        <div id="wrapper">
+            <header id="header">
+                <div class="content">
+                    <div class="inner">
+                        <h1>Select</h1>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#find">Find</a></li>
+                        <li><a href="#settings">Settings</a></li>
+                        <li><a href="index.html">Log Out</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="main">
+
+                <article id="find">
+                    <h2 class="major">Find Educators</h2>
+                    <input type="text" class="search-bar" placeholder="Search...">
+
+                    <div class="listing">
+                        <img src="images/educator1.jpg" alt="Profile Image" style="width:200px;height:200px;border-radius:50%;"/>
+                        <div class="info">
+                            <h3>Name: Jane Smith</h3>
+                            <p>Hourly Price: $50</p>
+                            <p>Bring Your Equipment: True</p>
+                            <p>Location: Ohio, USA</p>
+                            <p>Area of Expertise: Writing</p>
+                        </div>
+                        <button onclick="redirectPayment()" class="hire-button">Hire</button>
+                    </div>
+                    <div class="listing">
+                        <img src="images/educator2.jpg" alt="Profile Image" style="width:200px;height:200px;border-radius:50%;"/>
+                        <div class="info">
+                            <h3>Name: Charles Brown</h3>
+                            <p>Hourly Price: $20</p>
+                            <p>Bring Your Equipment: True</p>
+                            <p>Location: Calarfornia, USA</p>
+                            <p>Area of Expertise: Beekeeping</p>
+                        </div>
+                        <button onclick="redirectPayment()" class="hire-button">Hire</button>
+                    </div>
+                    <div class="listing">
+                        <img src="images/educator3.jpg" alt="Profile Image" style="width:200px;height:200px;border-radius:50%;"/>
+                        <div class="info">
+                            <h3>Name: Mandi Richardson</h3>
+                            <p>Hourly Price: $25</p>
+                            <p>Bring Your Equipment: False</p>
+                            <p>Location: Chicago, USA</p>
+                            <p>Area of Expertise: Public Speeking</p>
+                        </div>
+                        <button onclick="redirectPayment()" class="hire-button">Hire</button>
+                    </div>
+                    <div class="listing">
+                        <img src="images/educator4.jpg" alt="Profile Image" style="width:200px;height:200px;border-radius:50%;"/>
+                        <div class="info">
+                            <h3>Name: Charlene Guillemette </h3>
+                            <p>Hourly Price: $35</p>
+                            <p>Bring Your Equipment: Flase</p>
+                            <p>Location: Washington, USA</p>
+                            <p>Area of Expertise: Chess</p>
+                        </div>
+                        <button onclick="redirectPayment()" class="hire-button">Hire</button>
+                    </div>
+                    <div class="listing">
+                        <img src="images/educator5.jpg" alt="Profile Image" style="width:200px;height:200px;border-radius:50%;"/>
+                        <div class="info">
+                            <h3>Name: Mark Carroll</h3>
+                            <p>Hourly Price: $60</p>
+                            <p>Bring Your Equipment: True</p>
+                            <p>Location: Ohio, USA</p>
+                            <p>Area of Expertise: Programming</p>
+                        </div>
+                        <button onclick="redirectPayment()" class="hire-button">Hire</button>
+                    </div>
+                    <!-- Add more listings as needed -->
+                    <div class="page-buttons">
+                        <button onclick="previousPage()">Previous</button>
+                        <button onclick="nextPage()">Next</button>
+                    </div>
+
+
+                </article>
+
+                <article id="confirmpayment">
+                    <h2 class="major">Payment Confirmation</h2>
+                    <span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+                    <button onclick="confirmPayment()">Confirm Payment</button>
+                </article>
+
+                <article id="paymentsuccessful">
+                    <h2 class="major">Payment Successful</h2>
+                    <span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+                    <p> Thank you for using our services </p>
+                </article>
+
+                <article id="settings">
+                    <h2 class="major">Settings</h2>
+                    <div class="settings-form">
+                        <div class="profile-image-container">
+                            <img src="images/profile_image.jpg" alt="Profile Image" style="width:300px;height:300px;border-radius:50%;"/>
+                            <div class="overlay" onclick="document.getElementById('profile_picture').click();">Change Profile Picture</div>
+                        </div>
+                    </div>
+
+                    <form action="/submit_settings" method="post">
+                        <label for="first_name">First Name:</label>
+                        <input type="text" id="first_name" name="first_name" placeholder="First Name" >
+
+                        <label for="last_name">Last Name:</label>
+                        <input type="text" id="last_name" name="last_name" placeholder="Last Name" >
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Email" >
+
+                        <label for="password">New Password:</label>
+                        <input type="password" id="password" name="password" placeholder="New Password">
+
+                        <label for="password_confirmation">Confirm New Password:</label>
+                        <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Confirm New Password">
+
+                        <label for="interests">Topics of Interest:</label>
+                        <textarea id="interests" name="interests" placeholder="Topics of Interest"></textarea>
+
+                        <label for="card-number">Card Information:</label>
+                        <input type="text" class="card-number" placeholder="Card Number">
+
+                        <!-- Date Field -->
+                        <div class="date-field">
+                            <select name="Month">
+                                <option value="january">January</option>
+                                <option value="february">February</option>
+                                <option value="march">March</option>
+                                <option value="april">April</option>
+                                <option value="may">May</option>
+                                <option value="june">June</option>
+                                <option value="july">July</option>
+                                <option value="august">August</option>
+                                <option value="september">September</option>
+                                <option value="october">October</option>
+                                <option value="november">November</option>
+                                <option value="december">December</option>
+                            </select>
+                            <select name="Year">
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                            </select>
+                        </div>
+                        <input type="text" placeholder="CVV">
+
+                        <input type="submit" value="Save Changes">
+                    </form>
+                </article>
+
+                <article id="about">
+                    <h2 class="major">About</h2>
+                    <span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+                    <p>We are a platform to connect with educators world wide, our mission is to provide a convenient platform for both users and educators. For educators to display their services and for users to easily find the skill or topic they are interseted in.</p>
+                </article>
+
+                <!-- Contact -->
+                <article id="contact">
+                    <h2 class="major">Contact</h2>
+                    <form method="post" action="#">
+                        <div class="fields">
+                            <div class="field half">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" />
+                            </div>
+                            <div class="field half">
+                                <label for="email">Email</label>
+                                <input type="text" name="email" id="email" />
+                            </div>
+                            <div class="field">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" rows="4"></textarea>
+                            </div>
+                        </div>
+                        <ul class="actions">
+                            <li><input type="submit" value="Send Message" class="primary" /></li>
+                            <li><input type="reset" value="Reset" /></li>
+                        </ul>
+                    </form>
+                    <ul class="icons">
+                        <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </article>
+            </div>
+
+            <footer id="footer">
+                <p class="copyright">&copy; Teach Me Inc. - <a href="#contact">Contact Us</a> - <a href="#about">About</a></p>
+            </footer>
+
+        </div>
+
+        <!-- BG -->
+        <div id="bg"></div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="js/script.js"></script>
+
+    </body>
+</html>

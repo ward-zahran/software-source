@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Teach Me</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <div class="logo">
+                    <span class="icon fa-gem"></span>
+                </div>
+                <div class="content">
+                    <div class="inner">
+                        <h1>Teach Me</h1>
+                        <p>
+                        A Platform dedicated to connecting educators and students in any topic imaginable.
+                        </p>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#login">Login</a></li>
+                        <li><a href="#register">Register</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Main -->
+            <div id="main">
+
+                <!-- login -->
+                <article id="login">
+                    <h2 class="major">Login</h2>
+                    <span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+                    <form action="/submit_login" method="post">
+                        <input type="text" name="username" placeholder="Email" required>
+                        <input type="password" name="password" placeholder="Password" required>
+                        <input onclick="redirectToMain()" type="submit" value="Login">
+                    </form>
+                    <!-- Add a registration link -->
+                    <p>Don't have an account? <a href="#register">Register</a></p>
+                </article>
+
+                <article id="thankyou">
+                    <h2 class="major">Thank Your For Registering</h2>
+                    <span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+                    <!-- Add a registration link -->
+                    <p>Thank you for registering, please check your email to verify your account.</p>
+                    <input onclick="redirectToHome()" type="submit" value="Home">
+                </article>
+
+                <!-- Work -->
+                <article id="register">
+                    <h2 class="major">Register</h2>
+                    <span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+                    <form action="/submit_registration" method="post" onsubmit="redirectToThankYouPage()">
+                        <input type="text" name="email" placeholder="Email" required>
+                        <input type="text" name="first_name" placeholder="First Name" required>
+                        <input type="text" name="last_name" placeholder="Last Name" required>
+                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="password" name="password_confirmation" placeholder="Confirm Password" required>
+                        <input type="text" class="card-number" placeholder="Card Number">
+
+                        <!-- Date Field -->
+                        <div class="date-field">
+                            <select name="Month">
+                                <option value="january">January</option>
+                                <option value="february">February</option>
+                                <option value="march">March</option>
+                                <option value="april">April</option>
+                                <option value="may">May</option>
+                                <option value="june">June</option>
+                                <option value="july">July</option>
+                                <option value="august">August</option>
+                                <option value="september">September</option>
+                                <option value="october">October</option>
+                                <option value="november">November</option>
+                                <option value="december">December</option>
+                            </select>
+                            <select name="Year">
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                            </select>
+                        </div>
+                        <input type="text" placeholder="CVV">
+
+                        <input type="submit" value="Register" class="center" onclick="redirectToThankYouPage()">
+                    </form>
+                </article>
+
+                <!-- About -->
+                <article id="about">
+                    <h2 class="major">About</h2>
+                    <span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+                    <p>We are a platform to connect with educators world wide, our mission is to provide a convenient platform for both users and educators. For educators to display their services and for users to easily find the skill or topic they are interseted in.</p>
+                </article>
+
+                <!-- Contact -->
+                <article id="contact">
+                    <h2 class="major">Contact</h2>
+                    <form method="post" action="#">
+                        <div class="fields">
+                            <div class="field half">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" />
+                            </div>
+                            <div class="field half">
+                                <label for="email">Email</label>
+                                <input type="text" name="email" id="email" />
+                            </div>
+                            <div class="field">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" rows="4"></textarea>
+                            </div>
+                        </div>
+                        <ul class="actions">
+                            <li><input type="submit" value="Send Message" class="primary" /></li>
+                            <li><input type="reset" value="Reset" /></li>
+                        </ul>
+                    </form>
+                    <ul class="icons">
+                        <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </article>
+            </div>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">&copy; Teach Me Inc. - <a href="#contact">Contact Us</a> - <a href="#about">About</a></p>
+            </footer>
+
+        </div>
+
+        <!-- BG -->
+        <div id="bg"></div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="js/script.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,186 @@
+/* Your existing styles here... */
+
+.dark-mode {
+  background-color: #22303e;
+  color: #bdc3c7;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Add some styles for the login form */
+.login-form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 30px 0;
+  text-align: center; /* Center the elements within the form */
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.login-form input[type="submit"] {
+  background-color: #111;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Add a style for the registration link */
+.login-form a {
+  color: #111;
+  text-decoration: none;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.form-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Add some styles for the settings form */
+.settings-form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 30px 0;
+  text-align: center; /* Center the elements within the form */
+}
+
+.settings-form input[type="text"],
+.settings-form input[type="email"],
+.settings-form input[type="password"],
+.settings-form input[type="file"],
+.settings-form textarea,
+.settings-form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.settings-form input[type="submit"] {
+  background-color: #111;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.settings-form textarea {
+  resize: vertical; /* Allow the user to resize the textarea vertically */
+}
+
+.settings-form input[type="file"] {
+  padding: 10px;
+  background-color: #111;
+  color: white;
+  cursor: pointer;
+}
+
+.settings-form input[type="file"]::-webkit-file-upload-button {
+  background-color: #111;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.profile-image-container {
+  position: relative;
+  display: inline-block;
+}
+.profile-image-container:hover .overlay {
+  opacity: 0.8;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  width: 300px;
+  opacity: 0;
+  background-color: gray;
+  transition: opacity 0.25s ease-in-out;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 300px;
+}
+
+.listing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%; /* Adjust as needed */
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.info {
+  margin-left: 10px;
+}
